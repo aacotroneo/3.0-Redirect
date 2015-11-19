@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <meta name="viewport" content="initial-scale=1"/>
     <base href="/">
-    
+
     <style type="text/css">
 
         body,
@@ -48,28 +48,28 @@
             font-weight: 300;
             font-style: 22px;
         }
-        
+
          md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
             background: #39424D;
             color: rgba(255,255,255,0.87);
         }
-        
+
         .ct-logo{
             margin-bottom:10px;
         }
-        
+
         .ct-text-center{
             text-align:center;
         }
-        
+
         .ct-breaker{
             margin:20px 0;
         }
-        
+
         md-toolbar h3{
             margin:0 0 0 20px;
         }
-        
+
         .ct-bottom-20{
             margin-bottom:20px;
         }
@@ -90,13 +90,13 @@
 
 </head>
 <body ng-controller="AppCtrl" layout="column">
-    
+
     <div layout="column" flex layout-align="center center">
-        
+
         <div layout="row">
             <img src="https://d2531ae1m2uaia.cloudfront.net/images/ct-logo.png" alt="CommercialTribe Logo" class="ct-logo"/>
         </div>
-    
+
         <md-card class="md-default-theme" style="margin: 0 auto; background: #fff;max-width: 800px;">
             <md-toolbar layout="row" layout-align="start center" class="ct-primary">
                 <h3>How would you like to open this link?</h3>
@@ -144,7 +144,7 @@
                 </div>
                 <div layout="row" class="layout-align-center" flex>
                     <div class="text-center" flex layout-align="center center">
-                        
+
                         <div flex layout="row" layout-align="center center">
                             <md-button ng-if="!canRunWeb()" ng-href="{{downloads.CHROME}}" class="ct-outline-button ct-primary">
                                 Download Google Chrome
@@ -153,7 +153,7 @@
                                 Download Desktop App
                             </md-button>
                         </div>
-                
+
                         <p class="ct-text-center">If you have any questions or need help accessing the CommercialTribe application, please contact our
                             Helpdesk Team at: <a href="mailto:helpdesk@commercialtribe.com">helpdesk@commercialtribe.com</a></p>
 
@@ -169,7 +169,7 @@
                 <!-- end ngIf: skipWarning -->
             </md-card-content>
         </md-card>
-        
+
     </div>
 
 
