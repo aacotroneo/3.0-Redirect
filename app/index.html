@@ -107,12 +107,16 @@
                 </div>
                 <div layout="row" class="" layout-align="center center">
 
-                    <div ng-if="canRunDesktop()" flex="50" layout="column" layout-align="start center">
+                    <div ng-if="canRunDesktop() && isWin()" flex="50" layout="column" layout-align="start center">
                         <!-- WINDOWS WEBTOP-->
                         <img ng-if="isWin()" src="http://d2531ae1m2uaia.cloudfront.net/images/windows-icon.png" alt="windows logo" class="ct-bottom-20"/>
+                        <md-button ng-href="{{links.webtop}}" class="md-raised ct-success ct-top-20">Open in Desktop</md-button>
+                    </div>
+
+                    <div ng-if="canRunDesktop() && isMac()" flex="50" layout="column" layout-align="start center">
                         <!-- MAC WEBTOP-->
                         <img ng-if="isMac()" src="http://d2531ae1m2uaia.cloudfront.net/images/mac-icon.png" alt="apple logo" class="ct-bottom-20"/>
-                        <md-button ng-href="#" class="md-raised ct-success ct-top-20">Coming Soon</md-button>
+                        <p class="md-raised ct-success ct-top-20">Coming soon</p>
                     </div>
 
                     <!-- WEB-->
@@ -145,7 +149,7 @@
                             <md-button ng-if="!canRunWeb()" ng-href="{{downloads.CHROME}}" class="ct-outline-button ct-primary">
                                 Download Google Chrome
                             </md-button>
-                            <md-button ng-if="canRunDesktop()" ng-href="{{downloads.WEBTOP}}" class="ct-outline-button ct-primary">
+                            <md-button ng-if="canRunDesktop() && isWin()" ng-href="{{downloads.WEBTOP}}" class="ct-outline-button ct-primary">
                                 Download Desktop App
                             </md-button>
                         </div>
